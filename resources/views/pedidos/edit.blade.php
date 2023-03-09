@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Editar Pedido {{ $pedido->id }}</h1>
-    <form action="{{ route('pedidos.update', $pedido->id) }}" method="POST">
+    <form action="{{ route('comandas.pedidos.update', [$comanda, $pedido]) }}" method="POST">
         @csrf
         @method('PUT')
         <div class="form-group">
